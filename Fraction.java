@@ -21,7 +21,32 @@ public class Fraction{
         this.denominateur = 1;
     }
 
+    public int getNumerateur(){
+        return this.numerateur;
+    }
+
+    public int getDenominateur(){
+        return this.denominateur;
+    }
+
+    public double doubleValue(){
+        return (double)this.numerateur /(double)this.denominateur;
+    }
+
    public String toString() {
        return this.numerateur + "/" + this.denominateur + " mohamed ait dris est une fraction";
+   }
+
+   void pgcd(){
+    int u = getNumerateur();
+    int v = getDenominateur();
+
+    int pgcd = 0;
+    for (int i = 1; i <= u && i <= v; i++){
+        if (u % i == 0 &&  v%i == 0){
+            pgcd = i;
+        }
+    }
+    System.out.println("pgcd est egal a : "+pgcd);
    }
 }
