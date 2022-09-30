@@ -74,4 +74,18 @@ public class Fraction{
     assert n == j : "il ne sont pas egaux";
 
    }
+
+   public int comparaison(Fraction i ){
+
+    double z = this.doubleValue();
+    double u = i.doubleValue(); 
+
+    if (z > u ){
+        return 1;
+    }else if (z <u){
+        return -1;
+    }else {
+        return 0;
+    }
+}
 }

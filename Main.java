@@ -8,10 +8,11 @@ public class Main {
 
         System.out.println(a.addition(o).toString());
         double z = a.doubleValue(); 
-        a.TestESga(o);
         System.out.println(a.pgcd());
 
         System.out.println(z);
         System.out.println(a.toString());
+        System.out.println(a.comparaison(o));
+        a.TestESga(o);
     } 
 }
