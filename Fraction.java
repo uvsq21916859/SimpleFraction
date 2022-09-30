@@ -34,7 +34,7 @@ public class Fraction{
     }
 
    public String toString() {
-       return this.numerateur + "/" + this.denominateur + " mohamed ait dris est une fraction";
+       return this.numerateur + "/" + this.denominateur;
    }
 
    void pgcd(){
@@ -48,5 +48,18 @@ public class Fraction{
         }
     }
     System.out.println("pgcd est egal a : "+pgcd);
+   }
+
+   public Fraction addition(Fraction i){
+    
+    int u,v;
+    
+    u = getNumerateur() * i.denominateur + i.numerateur * getDenominateur();
+    v = getDenominateur() * i.denominateur;
+
+    Fraction p = new Fraction(u,v);
+    p.pgcd();
+
+    return p;
    }
 }
