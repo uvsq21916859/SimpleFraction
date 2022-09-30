@@ -37,7 +37,7 @@ public class Fraction{
        return this.numerateur + "/" + this.denominateur;
    }
 
-   void pgcd(){
+   public int pgcd(){
     int u = getNumerateur();
     int v = getDenominateur();
 
@@ -47,7 +47,7 @@ public class Fraction{
             pgcd = i;
         }
     }
-    System.out.println("pgcd est egal a : "+pgcd);
+    return pgcd;
    }
 
    public Fraction addition(Fraction i){
@@ -61,5 +61,17 @@ public class Fraction{
     p.pgcd();
 
     return p;
+   }
+
+   void TestESga(Fraction u){
+    int r = this.pgcd();
+    int y = u.pgcd();
+
+    int q = u.numerateur / y; int n = u.denominateur / y;
+    int d = this.numerateur / r; int j = this.denominateur /r;
+
+    assert q == d : "il ne sont pas egaux";
+    assert n == j : "il ne sont pas egaux";
+
    }
 }
